@@ -1,7 +1,7 @@
 def call(String profile, String tag, String config_file = "etc/kolla-build.conf") {
     sh """#!/bin/bash -eux
-    echo $tag
-    echo $profile
+    echo "$tag"
+    echo "$profile"
     exit 1
     export REGISTRY_AUTH_FILE=auth.json
     echo "\$REGISTRY_PSW" | docker login -u "\$REGISTRY_USR" --password-stdin "\$REGISTRY_HOST"
